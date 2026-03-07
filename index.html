@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Course Home Page for WDD231">
+<meta name="author" content="Raymond Mukonda">
+<title>WDD231 | Raymond Mukonda</title>
+
+<link rel="stylesheet" href="styles/normalize.css">
+<link rel="stylesheet" href="styles/small.css">
+<link rel="stylesheet" href="styles/larger.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<script src="scripts/navigation.js" defer></script>
+<script src="scripts/date.js" defer></script>
+<script src="scripts/course.js" defer></script>
+</head>
+
+<body>
+
+<header>
+<div class="logo-area">
+<img src="images/logo.svg" alt="site logo" class="logo">
+<span>Raymond Mukonda</span>
+</div>
+
+<button id="menu">☰</button>
+
+<nav id="nav">
+<a href="#">Home</a>
+<a href="#">Chamber</a>
+<a href="#">Final</a>
+</nav>
+</header>
+
+<main>
+
+<h1>Home</h1>
+
+<section class="about">
+<h2>About Me</h2>
+<p>
+I am Raymond Mukonda, a Software Engineering student based in Johannesburg, South Africa.
+I enjoy building software, learning new technologies, and developing web applications.
+My current skills include C#, Python, JavaScript, React, MySQL, HTML, and CSS.
+</p>
+</section>
+
+<section class="photo">
+<h2>Student Photo</h2>
+<img src="images/me.jpeg" alt="Student Photo">
+</section>
+
+<section class="courses">
+<h2>Web Certificate Courses</h2>
+
+<div class="buttons">
+<button id="all">All</button>
+<button id="wdd">WDD</button>
+<button id="cse">CSE</button>
+</div>
+
+<div id="course-container"></div>
+
+<p id="credits"></p>
+
+</section>
+
+</main>
+
+<footer>
+
+<div class="social">
+<a href="https://github.com/RaymondMukonda">GitHub</a>
+<a href="https://linkedin.com">LinkedIn</a>
+<a href="https://x.com">X</a>
+</div>
+
+<p>
+© <span id="currentyear"></span> Raymond Mukonda | Johannesburg, South Africa
+</p>
+
+<p id="lastModified"></p>
+
+</footer>
+
+</body>
+</html>

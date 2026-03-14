@@ -1,0 +1,60 @@
+{
+  "members": [
+    {
+      "name": "Desert Tech",
+      "address": "12 Sahara St",
+      "phone": "223-111-1111",
+      "website": "https://example.com",
+      "image": "biz1.svg",
+      "membership": 3
+    },
+    {
+      "name": "Timbuktu Market",
+      "address": "45 Oasis Rd",
+      "phone": "223-222-2222",
+      "website": "https://example.com",
+      "image": "biz2.svg",
+      "membership": 2
+    },
+    {
+      "name": "Golden Camel Tours",
+      "address": "78 Caravan Ave",
+      "phone": "223-333-3333",
+      "website": "https://example.com",
+      "image": "biz3.svg",
+      "membership": 1
+    },
+    {
+      "name": "Sahara Logistics",
+      "address": "99 Trade Way",
+      "phone": "223-444-4444",
+      "website": "https://example.com",
+      "image": "biz4.svg",
+      "membership": 3
+    },
+    {
+      "name": "Oasis Cafe",
+      "address": "33 Palm St",
+      "phone": "223-555-5555",
+      "website": "https://example.com",
+      "image": "biz5.svg",
+      "membership": 2
+    },
+    {
+      "name": "Desert Solar",
+      "address": "22 Sun Blvd",
+      "phone": "223-666-6666",
+      "website": "https://example.com",
+      "image": "biz6.svg",
+      "membership": 1
+    },
+    {
+      "name": "Nomad Supplies",
+      "address": "88 Caravan Market",
+      "phone": "223-777-7777",
+      "website": "https://example.com",
+      "image": "biz7.svg",
+      "membership": 2
+    }
+  ]
+}

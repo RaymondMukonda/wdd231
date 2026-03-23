@@ -22,8 +22,15 @@ div.classList.add("completed");
 }
 
 div.textContent=`${course.code} - ${course.name}`;
+
+div.addEventListener("click", () => {
+    displayCourseDetails(course);
+});
+
+
 container.appendChild(div);
 });
+
 
 const credits=list.reduce((sum,c)=>sum+c.credits,0);
 creditsDisplay.textContent="Total Credits: "+credits;

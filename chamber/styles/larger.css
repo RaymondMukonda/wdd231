@@ -114,11 +114,12 @@ justify-content: space-between;
 flex-wrap: wrap;
 }
 
-.footer-social {
-  text-align: right;
-}
+/* .footer-social {
+  
+} */
 
 .footer-social {
+  text-align: right;
   display: flex;              /* puts icons in a row */
   justify-content: center;    /* centers them horizontally */
   gap: 35px;                  /* spacing between icons */

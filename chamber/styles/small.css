@@ -6,7 +6,7 @@ display:none;
 font-size:2rem;
 background:none;
 border:none;
-color:rgb(233, 231, 231);
+color: #000000;
 }
 
 @media (max-width:768px){

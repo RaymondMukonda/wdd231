@@ -1,12 +1,17 @@
-/* Weather Section */
-.weather {
-  background: #f5f5f5;       
+#weather {
+  display: flex;
+  flex-wrap: wrap;              
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  text-align: center;
   padding: 20px;
   margin: 20px auto;
   border-radius: 8px;
-  max-width: 1200px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
+
 
 .weather h2 {
   margin-bottom: 10px;
@@ -20,6 +25,18 @@
   gap: 15px;
   font-size: 1.2rem;
 }
+
+
+
+/* for small scren */
+@media (max-width: 500px) {
+  #weather {
+    flex-direction: column;     
+    gap: 8px;
+    font-size: 1rem;
+  }
+}
+
 
 /* Spotlights Section */
 .spotlights {
@@ -53,3 +70,5 @@
   margin-bottom: 10px;
   border-radius: 6px;
 }
+
+

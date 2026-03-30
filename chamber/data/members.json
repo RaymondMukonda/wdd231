@@ -21,7 +21,7 @@
       "address": "Midrand, Johannesburg",
       "phone": "+27 11 555 8912",
       "website": "https://example.com",
-      "image": "images/mzansi-finance.jpg",
+      "image": "images/johannesburg-skyline.webp",
       "membership": 3
     },
     {
@@ -29,7 +29,7 @@
       "address": "Kempton Park, Johannesburg",
       "phone": "+27 11 555 1122",
       "website": "https://example.com",
-      "image": "images/african-trade.png",
+      "image": "images/african-trade.webp",
       "membership": 3
     },
     {

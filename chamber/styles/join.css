@@ -1,15 +1,8 @@
-body {
+ body {
   font-family: Arial;
-  margin: 0;
+  margin: 0; 
   background: #f4f8ff;
-}
-
-header, footer {
-  background: #0a3d91;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-}
+}  
 
 .container {
   display: grid;
@@ -68,5 +61,4 @@ header, footer {
     grid-template-columns: 2fr 1fr;
   }
 }
-
 

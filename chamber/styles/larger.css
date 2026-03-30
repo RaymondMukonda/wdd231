@@ -30,8 +30,13 @@ color:white;
 text-decoration:none;
 }
 
-.active{
-border-bottom:3px solid rgb(0, 255, 191);
+
+
+a.active {
+  color: #fff; 
+  background-color: #1e3a5f; 
+  border-bottom: 3px solid rgb(0, 255, 191); 
+  padding: 5px; 
 }
 
 

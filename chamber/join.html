@@ -74,7 +74,7 @@
       Organizational Title
       <input type="text" name="orgtitle" title="Organization Title"
         autocomplete="organization-title"
-        pattern="[A-Za-z\\-\\s]{7,}" >
+        pattern="[A-Za-z-\s]{7,}" >
     </label>
 
     <label>
@@ -147,10 +147,27 @@
 </main>
 
 
-<dialog id="npModal"><p>Free membership for non-profits.</p><button onclick="this.parentElement.close()">Close</button></dialog>
-<dialog id="bronzeModal"><p>Basic advertising benefits.</p><button onclick="this.parentElement.close()">Close</button></dialog>
-<dialog id="silverModal"><p>Event discounts + training.</p><button onclick="this.parentElement.close()">Close</button></dialog>
-<dialog id="goldModal"><p>Full premium benefits + spotlight ads.</p><button onclick="this.parentElement.close()">Close</button></dialog>
+  <dialog id="npModal">
+    <p>Free membership for non-profits.</p>
+    <button class="close-btn">Close</button>
+  </dialog>
+
+  <dialog id="bronzeModal">
+    <p>Basic advertising benefits.</p>
+    <button class="close-btn">Close</button>
+  </dialog>
+
+  <dialog id="silverModal">
+    <p>Event discounts + training.</p>
+    <button class="close-btn">Close</button>
+  </dialog>
+
+  <dialog id="goldModal">
+    <p>Full premium benefits + spotlight ads.</p>
+    <button class="close-btn">Close</button>
+  </dialog>
+
+
 
 <footer>
     <div class="footer-info">

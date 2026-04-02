@@ -1,7 +1,5 @@
  body {
-  font-family: Arial;
-  margin: 0; 
-  background: #f4f8ff;
+  background: #ccf7ff;
 }  
 
 .container {
@@ -35,7 +33,7 @@
 }
 
 .card {
-  background: #e6f0ff;
+  background: #ffffff;
   padding: 1rem;
   border-radius: 10px;
   text-align: center;

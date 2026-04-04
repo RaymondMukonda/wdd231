@@ -3,7 +3,7 @@ export const places = [
     name: "Johannesburg Botanical Garden",
     address: "Olifants Rd, Emmarentia, Johannesburg",
     description: "A beautiful green space perfect for relaxation, picnics, and nature walks.",
-    image: "images/Botanical-Garden.Webp"
+    image: "images/Botanical-Garden.webp"
   },
   {
     name: "Apartheid Museum",

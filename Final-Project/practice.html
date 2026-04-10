@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Practice | Learn Coding</title>
+  <meta name="description" content="Practice coding interactively.">
+  <meta name="author" content="Raymond Mukonda">
+
+   <link rel="icon" href="favicon/favicon (1).ico">
+
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/large.css">
+  <link rel="stylesheet" href="styles/practice.css">
+
+  <script type="module" src="scripts/practice.js" defer></script>
+  <script type="module" src="scripts/main.js" defer></script>
+
+</head>
+
+<body>
+<header>
+  <h1>Practice</h1>
+  <button id="menuBtn">☰</button>
+  <nav id="navMenu">
+    <a href="index.html">Home</a>
+    <a href="lessons.html">Lessons</a>
+    <a href="practice.html">Practice</a>
+    <a href="form.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <label for="savedLessons">Choose a saved lesson:</label>
+  <select id="savedLessons">
+    <option value="">-- Select a lesson --</option>
+  </select>
+
+  <h2>Try Coding</h2>
+
+  <!-- New section to show lesson snippet -->
+  <div id="lessonSnippet"></div>
+
+  <textarea id="codeInput" placeholder="Write HTML here..."></textarea>
+
+  <button id="runCode">Run Code</button>
+  <iframe id="output"></iframe>
+
+  <button id="openModal">Show Tips</button>
+  <dialog id="modal">
+    <p>Tip: Practice daily to improve faster!</p>
+    <button id="closeModal">Close</button>
+  </dialog>
+</main>
+
+
+
+<footer>
+  <p>&copy; 2026 Raymond Mukonda</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,15 @@
+@media (min-width: 900px) {
+  nav {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  #menuBtn {
+    display: none;
+  }
+
+  .features {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

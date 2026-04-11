@@ -1,4 +1,6 @@
 import { getData } from "./storage.js";
+import { openModal, closeModal } from "./modal.js";
+import { getLessons } from "./api_lessons.js";
 
 const runBtn = document.querySelector("#runCode");
 const input = document.querySelector("#codeInput");
@@ -6,43 +8,46 @@ const output = document.querySelector("#output");
 const savedLessonsDropdown = document.querySelector("#savedLessons");
 const lessonSnippetDiv = document.querySelector("#lessonSnippet");
 
-// Starter code snippets for lessons, ill extend them in the near futer
-const lessonSnippets = {
-  "HTML Basics": "<h1>Hello World!</h1>",
-  "Tags": "<p>This is a paragraph tag.</p>",
-  "Forms": "<form><input type='text' placeholder='Your name'></form>",
-  "CSS Intro": "<style>h1 { color: blue; }</style><h1>Styled Heading</h1>",
-  "Selectors": "<style>.highlight { color: red; }</style><p class='highlight'>Selected text</p>",
-  "JS Basics": "<script>console.log('Hello JS!');</script>",
-  "Variables": "<script>let name = 'Raymond'; console.log(name);</script>",
-  "Functions": "<script>function greet(){ alert('Hello!'); } greet();</script>"
-};
+let lessons = [];
 
-// Populate dropdown with saved lessons
-function loadSavedLessons() {
+
+
+// Populate dropdown with only saved lessons
+async function loadSavedLessons() {
+  lessons = await getLessons();
   const saved = getData("saved") || [];
+
   savedLessonsDropdown.innerHTML = "<option value=''>-- Select a lesson --</option>";
+
   saved.forEach(title => {
-    const option = document.createElement("option");
-    option.value = title;
-    option.textContent = title;
-    savedLessonsDropdown.appendChild(option);
+    const lesson = lessons.find(l => l.title === title);
+    if (lesson) {
+      const option = document.createElement("option");
+      option.value = lesson.title;
+      option.textContent = lesson.title;
+      savedLessonsDropdown.appendChild(option);
+    }
   });
 }
+
+
 
 // When user selects a lesson, show snippet under "Try Coding"
 savedLessonsDropdown.addEventListener("change", () => {
   const selected = savedLessonsDropdown.value;
-  if (selected && lessonSnippets[selected]) {
+  const lesson = lessons.find(l => l.title === selected);
+  if (lesson) {
     lessonSnippetDiv.innerHTML = `
-      <h3>${selected} Example</h3>
-      <pre><code>${lessonSnippets[selected].replace(/</g, "&lt;").replace(/>/g, "&gt;")}</code></pre>
-      <p>Copy this into the editor below or type it out  and run it!</p>
+      <h3>${lesson.title} Example</h3>
+      <pre><code>${lesson.snippet.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</code></pre>
+      <p>Copy this into the editor below or type it out and run it!</p>
     `;
   } else {
     lessonSnippetDiv.innerHTML = "";
   }
 });
+
+
 
 // Run code button
 runBtn.addEventListener("click", () => {
@@ -50,13 +55,36 @@ runBtn.addEventListener("click", () => {
   localStorage.setItem("code", input.value);
 });
 
+
+
 // Restore last code on page load
 window.onload = () => {
-  // input.value = localStorage.getItem("code") || "";
   loadSavedLessons();
 };
 
-// Modal logic for my pop up dont forget to style 
+
+
+// Modal logic
 const modal = document.querySelector("#modal");
-document.querySelector("#openModal").onclick = () => modal.showModal();
-document.querySelector("#closeModal").onclick = () => modal.close();
+const openBtn = document.querySelector("#openModal");
+const closeBtn = document.querySelector("#closeModal");
+
+openBtn.addEventListener("click", () => openModal(modal));
+closeBtn.addEventListener("click", () => closeModal(modal));
+
+
+// Motivation button logic
+const motivationBtn = document.querySelector("#motivationBtn");
+const motivationBox = document.querySelector("#motivationBox");
+
+motivationBtn.addEventListener("click", async () => {
+  try {
+    const response = await fetch("https://api.adviceslip.com/advice");
+    const data = await response.json();
+    motivationBox.innerHTML = `
+      <p><strong>Motivation:</strong> "${data.slip.advice}"</p>
+    `;
+  } catch (error) {
+    motivationBox.innerHTML = "<p>Could not load advice. Try again later.</p>";
+  }
+});

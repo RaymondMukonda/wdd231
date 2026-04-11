@@ -1,4 +1,3 @@
-// Import storage helpers
 import { saveData, getData } from "./storage.js";
 
 const container = document.querySelector("#lessonsContainer");
@@ -56,7 +55,7 @@ export function unsaveLesson(title) {
   getLessons();
 }
 
-// Make functions global for inline onclick
+// Make functions global for inline onclick bec im using on click instead of eventlistners
 window.saveLesson = saveLesson;
 window.unsaveLesson = unsaveLesson;
 

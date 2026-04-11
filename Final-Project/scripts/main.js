@@ -12,3 +12,9 @@ links.forEach(link => {
     link.classList.add("active");
   }
 });
+
+// Set last modified date
+document.getElementById("lastModified").textContent = document.lastModified;
+
+// Set current year for modification
+document.getElementById("year").textContent = new Date().getFullYear();

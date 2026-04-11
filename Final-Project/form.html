@@ -11,10 +11,22 @@
 
   <link rel="icon" href="favicon/favicon (1).ico">
 
+    <meta property="og:title" content="Learn Coding from Scratch">
+    <meta property="og:description" content="Beginner-friendly coding lessons and practice.">
+    <meta property="og:image" content="https://raymondmukonda.github.io/wdd231/Final-Project/images/hello-world.webp">
+    <meta property="og:url" content="https://raymondmukonda.github.io/wdd231/Final-Project/index.html">
+    <meta property="og:type" content="website">
+
+    
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles/main.css">
-  <link rel="stylesheet" href="styles/small.css">
-  <link rel="stylesheet" href="styles/medium.css">
   <link rel="stylesheet" href="styles/large.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/contact.css">
+
 
    <script type="module" src="scripts/main.js" defer></script>
 </head>
@@ -33,6 +45,8 @@
 </header>
 
 <main>
+    <p class="contact-intro">Contact us to get more in depth practice</p>
+
   <form action="thanks.html" method="get">
     <label>Name: <input type="text" name="name" required></label>
     <label>Email: <input type="email" name="email" required></label>
@@ -46,7 +60,32 @@
 </main>
 
 <footer>
-  <p>&copy; 2026 Raymond Mukonda</p>
+    <div class="footer-info">
+        <p><strong>&copy; 2026 Raymond Mukonda</strong></p>
+        <a href="attributions.html">Attributions</a>
+        <p><a href="#">Video Demo</a></p>
+        <p>info@southafrica.org</p>
+        <p>+ 27 67 234 1432</p>
+    </div>
+
+    <div class="footer-social">
+        <a href="https://github.com/yourusername" target="_blank">
+            <img src="icons/github.svg" alt="GitHub">
+        </a>
+        <a href="https://facebook.com/yourprofile" target="_blank">
+            <img src="icons/facebook.svg" alt="Facebook">
+        </a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank">
+            <img src="icons/linkedin.svg" alt="LinkedIn">
+        </a>
+    </div>
+
+    <div class="footer-dev">
+        <p>Raymond Mukonda | WDD 231</p>
+        <p>© <span id="year"></span> South Africa </p>
+        <p>Johannesburg</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </div>
 </footer>
 </body>
 </html>

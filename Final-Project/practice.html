@@ -13,6 +13,8 @@
 
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="styles/large.css">
+  <link rel="stylesheet" href="styles/small.css">
+
   <link rel="stylesheet" href="styles/practice.css">
 
   <script type="module" src="scripts/practice.js" defer></script>
@@ -53,12 +55,40 @@
     <p>Tip: Practice daily to improve faster!</p>
     <button id="closeModal">Close</button>
   </dialog>
+
+  <button id="motivationBtn">Need More Motivation</button>
+  <div id="motivationBox"></div>
 </main>
 
 
 
 <footer>
-  <p>&copy; 2026 Raymond Mukonda</p>
+    <div class="footer-info">
+        <p><strong>&copy; 2026 Raymond Mukonda</strong></p>
+        <a href="attributions.html">Attributions</a>
+        <p><a href="#">Video Demo</a></p>
+        <p>info@southafrica.org</p>
+        <p>+ 27 67 234 1432</p>
+    </div>
+
+    <div class="footer-social">
+        <a href="https://github.com/yourusername" target="_blank">
+            <img src="icons/github.svg" alt="GitHub">
+        </a>
+        <a href="https://facebook.com/yourprofile" target="_blank">
+            <img src="icons/facebook.svg" alt="Facebook">
+        </a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank">
+            <img src="icons/linkedin.svg" alt="LinkedIn">
+        </a>
+    </div>
+
+    <div class="footer-dev">
+        <p>Raymond Mukonda | WDD 231</p>
+        <p>© <span id="year"></span> South Africa </p>
+        <p>Johannesburg</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </div>
 </footer>
 </body>
 </html>

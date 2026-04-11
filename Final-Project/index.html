@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -13,7 +12,15 @@
 
   <meta property="og:title" content="Learn Coding from Scratch">
   <meta property="og:description" content="Beginner-friendly coding lessons and practice.">
+  <meta property="og:image" content="https://raymondmukonda.github.io/wdd231/Final-Project/images/hello-world.webp">
+  <meta property="og:url" content="https://raymondmukonda.github.io/wdd231/Final-Project/index.html">
   <meta property="og:type" content="website">
+
+    
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
 
   <link rel="icon" href="favicon/favicon (1).ico">
 
@@ -22,9 +29,11 @@
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/medium.css">
   <link rel="stylesheet" href="styles/large.css">
+  <link rel="stylesheet" href="styles/weather.css">
 
 
   <script type="module" src="scripts/main.js" defer></script>
+  <script defer src="scripts/weather.js"></script>
 
 </head>
 
@@ -50,7 +59,7 @@
 
 <section class="features">
   <div class="card">
-    <img src="images/hello-world.webp" alt="Beginner coding illustration" loading="lazy">
+    <img src="images/hello-world.webp" alt="Beginner coding illustration" >
     <div class="card-content">
       <h3>Beginner Friendly</h3>
       <p>Step-by-step lessons designed for absolute beginners. Learn the basics of HTML and JavaScript with clear explanations, examples, and guided exercises that build confidence from the ground up.</p>
@@ -58,7 +67,7 @@
   </div>
 
   <div class="card">
-    <img src="images/hello-world.webp" alt="Practice coding illustration" loading="lazy">
+    <img src="images/advance.webp" alt="Practice coding illustration" >
     <div class="card-content">
       <h3>Practice Code</h3>
       <p>Experiment with code directly in your browser. Interactive editors let you test ideas instantly, troubleshoot mistakes, and see results in real time — making learning both fun and practical.</p>
@@ -66,7 +75,7 @@
   </div>
 
   <div class="card">
-    <img src="images/hello-world.webp" alt="Track progress illustration" loading="lazy">
+    <img src="images/progress.webp" alt="Track progress illustration" >
     <div class="card-content">
       <h3>Track Progress</h3>
       <p>Save your favorite lessons, bookmark exercises, and monitor your improvement. Progress tracking helps you stay motivated and ensures you can pick up right where you left off.</p>
@@ -75,18 +84,46 @@
 </section>
 
 
-
-
   <section class="image-section">
-    <img src="images/hello-world.webp" alt="coding" loading="lazy">
+    <img src="images/meme.webp" alt="coding" loading="lazy">
   </section>
+
+
+	<section class="weather">
+		<h4>Johannesburg Weather</h4>
+		<div id="weather"></div>
+	</section>
 
 </main>
 
+
 <footer>
-  <p>&copy; 2026 Raymond Mukonda</p>
-  <a href="attributions.html">Attributions</a>
-  <p><a href="#">Video Demo</a></p>
+    <div class="footer-info">
+        <p><strong>&copy; 2026 Raymond Mukonda</strong></p>
+        <a href="attributions.html">Attributions</a>
+        <p><a href="#">Video Demo</a></p>
+        <p>info@southafrica.org</p>
+        <p>+ 27 67 234 1432</p>
+    </div>
+
+    <div class="footer-social">
+        <a href="https://github.com/yourusername" target="_blank">
+            <img src="icons/github.svg" alt="GitHub">
+        </a>
+        <a href="https://facebook.com/yourprofile" target="_blank">
+            <img src="icons/facebook.svg" alt="Facebook">
+        </a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank">
+            <img src="icons/linkedin.svg" alt="LinkedIn">
+        </a>
+    </div>
+
+    <div class="footer-dev">
+        <p>Raymond Mukonda | WDD 231</p>
+        <p>© <span id="year"></span> South Africa </p>
+        <p>Johannesburg</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </div>
 </footer>
 </body>
 </html>
